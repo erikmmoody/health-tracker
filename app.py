@@ -8,8 +8,8 @@ from health_tracker.pipeline_stack import PipelineStack
 app = cdk.App()
 PipelineStack(
     app,
-    "HealthTrackerPipelineStack",
-    env=cdk.Environment(account="504720764336", region="us-east-1")
+    "PipelineStack",
+    env=cdk.Environment(account="504720764336", region="us-east-2")
 )
 # HealthTrackerStack(app, "HealthTrackerStack",
 #     # If you don't specify 'env', this stack will be environment-agnostic.
