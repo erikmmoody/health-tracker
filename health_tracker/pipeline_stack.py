@@ -12,7 +12,7 @@ from aws_cdk import SecretValue
 class PipelineStack(cdk.Stack):
     def __init__(self, scope: Construct, construct_id: str, **kwargs) -> None:
         super().__init__(scope, construct_id, **kwargs)
-        github_access_token = SecretValue.secrets_manager("github-token")
+        github_access_token = SecretValue.secrets_manager("github-token", json_field="github-token")
         print(f"token json {github_access_token.to_json()}")
         pipeline = CodePipeline(
             self,
